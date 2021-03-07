@@ -1,0 +1,25 @@
+﻿<Module>
+  <Name value="SueTheSecondGeneration"/>
+  <Id value="SueTheSecondGeneration"/>
+  <Version value="v1.0.1"/>
+  <SingleplayerModule value="true"/>
+  <MultiplayerModule value="false"/>
+  <DependedModules>
+    <DependedModule Id="Native" DependentVersion="e1.5.7"/>
+    <DependedModule Id="SandBoxCore" DependentVersion="e1.5.7"/>
+    <DependedModule Id="Sandbox" DependentVersion="e1.5.7"/>
+    <DependedModule Id="StoryMode" DependentVersion="e1.5.7"/>
+  </DependedModules>
+  <SubModules>
+    <SubModule>
+      <Name value="SueTheSecondGeneration"/>
+      <DLLName value="SueTheSecondGeneration.dll"/>
+      <SubModuleClassType value="SueTheSecondGeneration.SubModule"/>
+      <Tags>
+        <Tag key="DedicatedServerType" value="none" />
+        <Tag key="IsNoRenderModeElement" value="false" />
+      </Tags>
+    </SubModule>
+  </SubModules>
+  <Xmls/>
+</Module>

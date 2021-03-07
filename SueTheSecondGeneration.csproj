@@ -1,0 +1,126 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Main Project Properties -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <PlatformTarget Condition=" '$(PlatformTarget)' == '' ">x64</PlatformTarget>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7511119D-9501-4540-AA31-0F57D93817DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SueTheSecondGeneration</RootNamespace>
+    <AssemblyName>SueTheSecondGeneration</AssemblyName>
+    <GamePath>F:\steam\steamapps\common\Mount &amp; Blade II Bannerlord</GamePath>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <!-- Debug Configuration Properties -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>F:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <!-- Release Configuration Properties -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(GamePath)\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- Debugging Properties -->
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(GamePath)\bin\Win64_Shipping_Client\Bannerlord.exe</StartProgram>
+    <StartArguments>/singleplayer _MODULES_*BetterExceptionWindow*Native*SandBoxCore*CustomBattle*Sandbox*StoryMode*SueMoreSpouses*SueTheSecondGeneration*_MODULES_</StartArguments>
+    <StartWorkingDirectory>$(GamePath)\bin\Win64_Shipping_Client</StartWorkingDirectory>
+  </PropertyGroup>
+  <!-- Bannerlord Native Assemblies -->
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.0.4\lib\net472\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="$(GamePath)\bin\Win64_Shipping_Client\TaleWorlds*.dll">
+      <HintPath>%(Identity)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- Bannerlord Module Assemblies  -->
+    <Reference Include="$(GamePath)\Modules\Native\bin\Win64_Shipping_Client\TaleWorlds*.dll">
+      <HintPath>%(Identity)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(GamePath)\Modules\SandBox\bin\Win64_Shipping_Client\SandBox*.dll">
+      <HintPath>%(Identity)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(GamePath)\Modules\StoryMode\bin\Win64_Shipping_Client\StoryMode*.dll">
+      <HintPath>%(Identity)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(GamePath)\Modules\CustomBattle\bin\Win64_Shipping_Client\TaleWorlds*.dll">
+      <HintPath>%(Identity)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <!-- Files & Classes -->
+  <ItemGroup>
+    <Compile Include="Behavior\TheSecondGenerateBehavior.cs" />
+    <Compile Include="Data\TSGOptionBuilder.cs" />
+    <Compile Include="Data\TSGOptionGroup.cs" />
+    <Compile Include="Data\TSGOptionItem.cs" />
+    <Compile Include="Data\TSGOptionType.cs" />
+    <Compile Include="Data\TSGValueNamePair.cs" />
+    <Compile Include="GauntletUI\State\TheSecondGenerationState.cs" />
+    <Compile Include="GauntletUI\TheSecondGenerationScreen.cs" />
+    <Compile Include="GauntletUI\TSGViewModel\TheSecondGernationVM.cs" />
+    <Compile Include="GauntletUI\TSGViewModel\TSGOptionGroupItemGroupVM.cs" />
+    <Compile Include="GauntletUI\TSGViewModel\TSGOptionGroupVM.cs" />
+    <Compile Include="GauntletUI\TSGViewModel\TSGOptionGroupItemVM.cs" />
+    <Compile Include="GauntletUI\TSGViewModel\TSGSelectorItemVM.cs" />
+    <Compile Include="GauntletUI\TSGViewModel\TSGSelectorVM.cs" />
+    <Compile Include="GauntletUI\TSGWidget\TSGOptionsDropdownWidget.cs" />
+    <Compile Include="Path\ChangeClanNamePath.cs" />
+    <Compile Include="Service\ClanLordService.cs" />
+    <Compile Include="Service\SpouseService.cs" />
+    <Compile Include="SubModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheSecondBusiness.cs" />
+    <Compile Include="TheSecondGenerationDataSetting.cs" />
+    <Compile Include="Utils\DistinctSpouse.cs" />
+    <Compile Include="Utils\GameDataGenerateUtils.cs" />
+    <Compile Include="Service\OccuptionService.cs" />
+    <Content Include="Readme.txt" />
+    <Content Include="Resource\GUI\Brushes\TheSecondGenerationBrushs.xml" />
+    <Content Include="Resource\GUI\Prefabs\TSGDropdownWithHorizontalControl.xml" />
+    <Content Include="Resource\GUI\Prefabs\TheSecondGenerationDashboard.xml" />
+    <Content Include="Resource\GUI\Prefabs\TSGOptionGroupItem.xml" />
+    <Content Include="Resource\GUI\Prefabs\TSGOptionGroup.xml" />
+    <Content Include="Resource\ModuleData\Languages\CNs\the_second_generation.xml" />
+    <Content Include="Resource\ModuleData\Languages\CNt\the_second_generation.xml" />
+    <Content Include="Resource\ModuleData\Languages\the_second_generation.xml" />
+    <Content Include="Resource\ModuleData\the_second_generation.xml" />
+    <Content Include="Resource\SubModule.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Attribe\" />
+  </ItemGroup>
+  <!-- Post-Build -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy  /Y /S "$(MSBuildProjectDirectory)\Resource" "$(GamePath)\Modules\SueTheSecondGeneration"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
