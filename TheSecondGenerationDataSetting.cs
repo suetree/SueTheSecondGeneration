@@ -28,6 +28,7 @@ namespace SueTheSecondGeneration
 		public int ResourceMeat { get; set; }
 		public int ClanTier { get; set; }
 		public int ClanRenown { get; set; }
+		public int ClanInfluence { get; set; }
 		public bool EnableKimdom { get; set; }
 		//public bool IsSupportImperial { get; set; }
 		//public int FiefNumbers { get; set; }
@@ -61,13 +62,13 @@ namespace SueTheSecondGeneration
 			TSGOptionBuilder optionBuilder = new TSGOptionBuilder();
 			optionBuilder.BuildGroup(Instance, "EnableGroupInfluence", "{=tsg_setting_clan}Clan", "{=tsg_setting_clan_describe}Enable clan settings")
 				//.AddOption(new TSGOptionItem("FiefNumbers", "{=trs_setting_fief_number}Fief Number", FiefNumbers, TSGOptionType.IntegerProperty, 0, 10))
-				.AddOption(new TSGOptionItem(Instance, "EnableKimdom", "{=tsg_setting_kindom_create}Enable kindom creation", EnableKimdom, TSGOptionType.BoolProperty))
+				.AddOption(new TSGOptionItem(Instance, "EnableKimdom", "{=tsg_setting_kindom_creation}Enable kindom creation", EnableKimdom, TSGOptionType.BoolProperty))
 				.AddOption(new TSGOptionItem(Instance, "KindomCulture", "{=tsg_setting_kindom_cultrue}Kindom cultrue", KindomCulture, TSGOptionType.SingleSelectProperty).FillSelectItems(CulturePairs()))
 				.AddOption(new TSGOptionItem(Instance, "FiefSettlements", "{=tsg_setting_fielf}Fielf", FiefSettlements, TSGOptionType.MultipleSelectProperty).FillSelectItems(FiefPairs()))
 				.AddOption(new TSGOptionItem(Instance, "ClanTier", "{=tsg_setting_clan_tier}Clan tier", ClanTier, TSGOptionType.IntegerProperty, 1, 6))
-				.AddOption(new TSGOptionItem(Instance, "ClanRenown", "{=tsg_setting_clan_renown}Clan renown", ClanRenown, TSGOptionType.IntegerProperty, 0, 1000))
-
-				.AddOption(new TSGOptionItem(Instance, "ResourceGold", "{=tsg_setting_gold}Gold", ResourceGold, TSGOptionType.IntegerProperty, 0, 100))
+				.AddOption(new TSGOptionItem(Instance, "ClanRenown", "{=tsg_setting_clan_renown}Clan renown", ClanRenown, TSGOptionType.IntegerProperty, 0, 10000))
+				.AddOption(new TSGOptionItem(Instance, "ClanInfluence", "{=tsg_setting_clan_influence}Clan influence", ClanInfluence, TSGOptionType.IntegerProperty, 0, 50000))
+				.AddOption(new TSGOptionItem(Instance, "ResourceGold", "{=tsg_setting_gold}Gold", ResourceGold, TSGOptionType.IntegerProperty, 0, 300))
 				.AddOption(new TSGOptionItem(Instance, "ResourceMeat", "{=tsg_setting_meat} Meat", ResourceGold, TSGOptionType.IntegerProperty, 0, 100));
 
 			optionBuilder.BuildGroup(Instance, "EnableGroupCompanion", "{=tsg_setting_companion}Companion", "{=tsg_setting_companion_describe}Enable conpanion settings")

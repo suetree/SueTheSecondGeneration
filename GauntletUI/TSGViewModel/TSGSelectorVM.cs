@@ -207,7 +207,7 @@ namespace SueTheSecondGeneration.GauntletUI.TSGViewModel
 			if (arg_34_0)
 			{
 
-				T randomElement = this.ItemList.Where(obj => obj.CanBeSelected).GetRandomElement<T>();
+				T randomElement = this.ItemList.GetRandomElementWithPredicate((T i) => i.CanBeSelected);
 				//this.SelectedIndex = this.ItemList.IndexOf(randomElement);
 			}
 		}
