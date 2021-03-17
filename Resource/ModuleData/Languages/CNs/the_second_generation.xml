@@ -11,13 +11,14 @@
    <string id="tsg_setting_fielf" text="封地" />
    <string id="tsg_setting_clan_tier" text="家族等级" />
    <string id="tsg_setting_clan_renown" text="家族声望" />
-   <string id="tsg_setting_gold" text="金钱" />
+   <string id="tsg_setting_clan_influence" text="家族影响力" />
+   <string id="tsg_setting_gold" text="金钱(单位:万)" />
    <string id="tsg_setting_meat" text="肉" />
 
   <string id="tsg_setting_companion" text="同伴" />
   <string id="tsg_setting_companion_describe" text="启用同伴设定" />
   <string id="tsg_setting_companion_couple_max_num" text="最大夫妻数量" />
-  <string id="tsg_setting_companion_couple_has_children_probility" text="夫妻有孩子概率" />
+  <string id="tsg_setting_companion_couple_has_children_probility" text="夫妻有孩子概率(十分之)" />
   <string id="tsg_setting_companion_tier" text="同伴来源士兵等级" />
   <string id="tsg_setting_companion_skill_level" text="同伴技能等级" />
   <string id="tsg_setting_companion_perk_auto" text="专精自动点" />

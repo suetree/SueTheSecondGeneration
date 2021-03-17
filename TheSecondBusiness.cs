@@ -24,14 +24,15 @@ namespace SueTheSecondGeneration
 		{
 			TheSecondGenerationDataSetting setting = TheSecondGenerationDataSetting.Instance;
 
-			if (setting.EnableGroupInfluence) StartSetForInfluence(setting);
+			if (setting.EnableGroupInfluence) StartSetForFaction(setting);
 			if (setting.EnableGroupTroop) StartSetTroop(setting);
 			if (setting.EnableGroupCompanion) StartSetCompanion(setting);
 			if (setting.EnableGroupPlayerFamily) StartSetPlayerFamily(setting);
 
 		}
+		
 
-		private static void StartSetForInfluence(TheSecondGenerationDataSetting setting)
+		private static void StartSetForFaction(TheSecondGenerationDataSetting setting)
         {
 			if (setting.ResourceGold > 0)
 			{
@@ -52,11 +53,12 @@ namespace SueTheSecondGeneration
 				}
 			}
 			Clan.PlayerClan.AddRenown(setting.ClanRenown, true);
+			Clan.PlayerClan.Influence += setting.ClanInfluence;
 
 			bool enableKimdom = setting.EnableKimdom;
 			if (enableKimdom)
 			{
-				List<Settlement> list = DistributeRandomStetment(setting);
+				List<Settlement> list = DistributeRandomSettlement(setting);
 				CreateKingdom(list, setting.KindomCulture.Value as CultureObject);
 			}
 		}
@@ -165,7 +167,7 @@ namespace SueTheSecondGeneration
 			}
 		}
 
-		private static List<Settlement> DistributeRandomStetment(TheSecondGenerationDataSetting setting)
+		private static List<Settlement> DistributeRandomSettlement(TheSecondGenerationDataSetting setting)
 		{
 			List<Settlement> list = new List<Settlement>();
 			setting.FiefSettlements.ForEach(obj => list.Add(obj.Value as Settlement));
