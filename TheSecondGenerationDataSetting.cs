@@ -177,7 +177,7 @@ namespace SueTheSecondGeneration
 			{
 				List<TSGValueNamePair> list = new List<TSGValueNamePair>();
 				IEnumerable<CharacterObject> heros = CharacterObject.All.Where(
-					obj => obj.IsHero && CharacterObject.PlayerCharacter != obj && (obj.Occupation == Occupation.Lord || obj.Occupation == Occupation.Wanderer));
+					obj => obj.IsHero && obj.IsFemale && obj.HeroObject.IsAlive && obj.Age < 43 && CharacterObject.PlayerCharacter != obj && (obj.Occupation == Occupation.Lord || obj.Occupation == Occupation.Wanderer));
 				foreach (CharacterObject current in heros)
 				{
 					list.Add(new TSGValueNamePair(current, current.Name.ToString()));

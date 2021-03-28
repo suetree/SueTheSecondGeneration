@@ -19,3 +19,12 @@ C:\Users\Administrator\Source\Repos\SueTheSecondGeneration\obj\Debug\SueTheSecon
 E:\steam\steamapps\common\Mount & Blade II Bannerlord\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\SueTheSecondGeneration.dll
 E:\steam\steamapps\common\Mount & Blade II Bannerlord\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\SueTheSecondGeneration.pdb
 C:\Users\Administrator\Source\Repos\SueTheSecondGeneration\obj\Debug\SueTheSecondGeneration.csproj.CopyComplete
+E:\Games\158Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\SueTheSecondGeneration.dll
+E:\Games\158Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\SueTheSecondGeneration.pdb
+E:\Games\158\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\SueTheSecondGeneration.dll
+E:\Games\158\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\SueTheSecondGeneration.pdb
+C:\Users\admin\source\repos\SueTheSecondGeneration\obj\Debug\SueTheSecondGeneration.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\SueTheSecondGeneration\obj\Debug\SueTheSecondGeneration.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\SueTheSecondGeneration\obj\Debug\SueTheSecondGeneration.csproj.CopyComplete
+C:\Users\admin\source\repos\SueTheSecondGeneration\obj\Debug\SueTheSecondGeneration.dll
+C:\Users\admin\source\repos\SueTheSecondGeneration\obj\Debug\SueTheSecondGeneration.pdb
