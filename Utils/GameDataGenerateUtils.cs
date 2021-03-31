@@ -84,6 +84,9 @@ namespace SueTheSecondGeneration.Utils
 			while (list.Count > 1 && list3.Count < maxNumber)
 			{
 				Hero randomElement = list.GetRandomElement<Hero>();
+				randomElement.UpdatePlayerGender(false);
+				randomElement.FirstName = HeroCreator.CreateSpecialHero(randomElement.Template, Hero.MainHero.BornSettlement, Clan.PlayerClan, Clan.PlayerClan, 20).FirstName;
+				randomElement.CharacterObject.Name = HeroCreator.CreateSpecialHero(randomElement.Template, Hero.MainHero.BornSettlement, Clan.PlayerClan, Clan.PlayerClan, 20).FirstName;
 				list.Remove(randomElement);
 				list2.Add(randomElement);
 				Hero randomElement2 = list.GetRandomElement<Hero>();
@@ -91,6 +94,7 @@ namespace SueTheSecondGeneration.Utils
 				list.Remove(randomElement2);
 				list2.Add(randomElement2);
 				list3.Add(randomElement2);
+
 			}
 			float num = childrenProbability;
 			bool flag6 = num > 0f;

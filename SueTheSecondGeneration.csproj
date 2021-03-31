@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SueTheSecondGeneration</RootNamespace>
     <AssemblyName>SueTheSecondGeneration</AssemblyName>
-    <GamePath>E:\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</GamePath>
+    <GamePath>E:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\</GamePath>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>E:\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\</OutputPath>
+    <OutputPath>E:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\\Modules\SueTheSecondGeneration\bin\Win64_Shipping_Client\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
